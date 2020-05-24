@@ -25,28 +25,30 @@
 
 First, let's take a closer look at one of a very useful option `--load`
 
-
 ```bash
 # 1. Load tiny-yolo.weights
 flow --model cfg/tiny-yolo.cfg --load bin/tiny-yolo.weights
-
+```
 * [Weight file](https://drive.google.com/file/d/1cEvqlN_OGS4AR_Vxu6AFoTHaBy294aJJ/view)
 
+```
 # 2. To completely initialize a model, leave the --load option
 flow --model cfg/yolo-new.cfg
+```
 
 * [Config file](https://drive.google.com/file/d/1oH9f94nYlnkT15amplhPv9uOTWZjamIS/view)
 
+```
 # 3. It is useful to reuse the first identical layers of tiny for `yolo-new`
 flow --model cfg/yolo-new.cfg --load bin/tiny-yolo.weights
-# this will print out which layers are reused, which are initialized
+# this will print out which layers are reused, which are initialized 
 ```
 
-Sample input images from default folder `sample_imgs/` are flowed through the net and predictions are relayed through live video out if real-time webcam input is considered or confidence is output in case of image input. We can always specify more parameters for such forward passes, such as detection threshold, batch size, images folder, etc.
+Sample input images from default folder `sample_imgs/` are flowed through the net and predictions are relayed through live video out for a real-time webcam input or the confidence in case of image input. We can always specify more parameters for such forward passes, such as detection threshold, batch size, images folder, etc.
 
  - labels: labels used for classification
  - confidence: somewhere between 40 to 60 (how confident yolo is about that detection)
- - correct classification in case of exceptional cases like a hard-hat,kepi/shako
+ - [x] correct classification in case of exceptional cases like a hard-hat,kepi/shako
 
 
 ### Training on your own dataset
@@ -111,7 +113,6 @@ For a demo that entirely runs on the CPU:
 
 * the options field is set to default to CPU environment
 * the `options` field in `video.py` can be appropriately set (recommended 0.7)
-
-To use your webcam/camera, simply replace self.offset variable in `video.py` with the `(expected offest-found offest)`
+* To use your webcam/camera, simply replace self.offset variable in `video.py` with the `(expected offest-found offest)`
 
 That's all.
