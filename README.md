@@ -116,5 +116,5 @@ For a demo that entirely runs on the CPU:
 * To use your webcam/camera, simply replace self.offset variable in `video.py` with the `(expected offset-found offset)`
 
 ## Inference
-<img src="sample_out/6.png" width="100" height="100">
+<img src="sample_out/1.jpg" width="100" height="100">
 That's all.
