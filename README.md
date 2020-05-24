@@ -116,5 +116,12 @@ For a demo that entirely runs on the CPU:
 * To use your webcam/camera, simply replace self.offset variable in `video.py` with the `(expected offset-found offset)`
 
 ## Inference
-<img src="sample_out/1.jpg" width="100" height="100">
+* Thresholding
+<img src="sample_out/12.jpg" width="400" height="300">
+* Single Activation
+<img src="sample_out/5.jpg" width="400" height="300">
+* Multiple contrast Activations
+<img src="sample_out/1.jpg" width="400" height="300">
+* Exceptional Activation 
+<img src="sample_out/8.jpg" width="400" height="300">
 That's all.
