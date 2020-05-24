@@ -1,2 +1,2 @@
 # hardhat
-yolo on darknet fw for helmet classification
+yolo on darkflow fw for helmet classification
