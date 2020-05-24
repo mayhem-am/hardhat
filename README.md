@@ -113,6 +113,6 @@ For a demo that entirely runs on the CPU:
 
 * the options field is set to default to CPU environment
 * the `options` field in `video.py` can be appropriately set (recommended 0.7)
-* To use your webcam/camera, simply replace self.offset variable in `video.py` with the `(expected offest-found offest)`
+* To use your webcam/camera, simply replace self.offset variable in `video.py` with the `(expected offset-found offset)`
 
 That's all.
