@@ -27,20 +27,20 @@ First, let's take a closer look at one of a very useful option `--load`
 
 ```bash
 # 1. Load tiny-yolo.weights
-flow --model cfg/tiny-yolo.cfg --load bin/tiny-yolo.weights
+python flow --model cfg/tiny-yolo.cfg --load bin/tiny-yolo.weights
 ```
 * [Weight file](https://drive.google.com/file/d/1cEvqlN_OGS4AR_Vxu6AFoTHaBy294aJJ/view)
 
 ```
 # 2. To completely initialize a model, leave the --load option
-flow --model cfg/yolo-new.cfg
+python flow --model cfg/yolov2tiny.cfg
 ```
 
 * [Config file](https://drive.google.com/file/d/1oH9f94nYlnkT15amplhPv9uOTWZjamIS/view)
 
 ```
 # 3. It is useful to reuse the first identical layers of tiny for `yolo-new`
-flow --model cfg/yolo-new.cfg --load bin/tiny-yolo.weights
+flow --model cfg/yolov2tiny.cfg --load bin/yolov2-tiny_3000.weights
 # this will print out which layers are reused, which are initialized 
 ```
 
@@ -112,7 +112,7 @@ Sample input images from default folder `sample_imgs/` are flowed through the ne
 For a demo that entirely runs on the CPU:
 
 * the options field is set to default to CPU environment
-* the `options` field in `video.py` can be appropriately set (recommended 0.7)
+* the `options : gpu` field in `video.py` can be appropriately set (recommended 0.7)
 * To use your webcam/camera, simply replace self.offset variable in `video.py` with the `(expected offset-found offset)`
 
 ## Inference
