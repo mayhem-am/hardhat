@@ -73,7 +73,7 @@ Sample input images from default folder `sample_imgs/` are flowed through the ne
     ...
     ```
 
-3. In `tiny-yolo-voc-3c.cfg`, change filters in the [convolutional] layer (the second to last layer) to num * (classes + 5). In our case, num is 5 and classes are 3 so 5 * (2 + 5) = 35 therefore filters are set to 35.
+3. In `tiny-yolo-voc-3c.cfg`, change filters in the [convolutional] layer (the second to last layer) to num * (classes + 5). In our case, num is 5 and classes are 2 so 5 * (2 + 5) = 35 therefore filters are set to 35.
     
     ```python
     ...
@@ -113,7 +113,7 @@ For a demo that entirely runs on the CPU:
 
 * the options field is set to default to CPU environment
 * the `options : gpu` field in `video.py` can be appropriately set (recommended 0.7)
-* To use your webcam/camera, simply replace self.offset variable in `video.py` with the `(expected offset-found offset)`
+* To use your webcam/camera, simply replace `self.offset` variable in `video.py` with the `(expected offset-found offset)`
 
 ## Inference
 
